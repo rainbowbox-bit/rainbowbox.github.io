@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>我的 AI 工具箱</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; padding: 20px; background: #f4f7f6; }
+        .card { background: white; padding: 15px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .tag { display: inline-block; background: #e1f5fe; color: #0288d1; padding: 2px 8px; border-radius: 4px; font-size: 0.8em; }
+        .btn { background: #4CAF50; color: white; padding: 8px 15px; text-decoration: none; border-radius: 4px; display: inline-block; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <h1>我的 AI 工具展示館</h1>
+    <p>這裡集合了我用 Google AI 技術製作的各式工具。</p>
+
+    <div class="card">
+        <span class="tag">Gemini Canvas</span>
+        <h3>範例工具 A：創意寫作助手</h3>
+        <p>點擊下方連結即可複製範本至您的 Gemini 使用。</p>
+        <a href="你的Gemini_Canvas分享連結" target="_blank" class="btn">立即開啟</a>
+    </div>
+
+    <div class="card">
+        <span class="tag">AI Studio / API</span>
+        <h3>範例工具 B：自動評語生成器</h3>
+        <p>此工具需使用您的 API Key。請放心，Key 僅存在您的瀏覽器中。</p>
+        <input type="password" id="apiKey" placeholder="在此輸入您的 Gemini API Key">
+        <a href="#" class="btn" onclick="alert('連結至你的GAS Web App或前端介面')">進入工具</a>
+    </div>
+
+    <hr>
+    <p>技術支援：Google Apps Script + GitHub Pages</p>
+</body>
+</html>
