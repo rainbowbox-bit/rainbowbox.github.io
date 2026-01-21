@@ -2,34 +2,73 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <title>我的 AI 工具箱</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>袋鼠老師－幼教魔法口袋</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { font-family: sans-serif; line-height: 1.6; padding: 20px; background: #f4f7f6; }
-        .card { background: white; padding: 15px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .tag { display: inline-block; background: #e1f5fe; color: #0288d1; padding: 2px 8px; border-radius: 4px; font-size: 0.8em; }
-        .btn { background: #4CAF50; color: white; padding: 8px 15px; text-decoration: none; border-radius: 4px; display: inline-block; margin-top: 10px; }
+        :root {
+            --bg-color: #e0e5ec;
+            --shadow-light: #ffffff;
+            --shadow-dark: #a3b1c6;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+            color: #444;
+        }
+
+        /* 外部軟 UI 容器：大面積凸起 */
+        .neu-container {
+            background: var(--bg-color);
+            box-shadow: 20px 20px 60px var(--shadow-dark), 
+                        -20px -20px 60px var(--shadow-light);
+            border-radius: 50px;
+        }
+
+        /* 內部嵌入區：凹陷效果，營造深度感 */
+        .neu-inset-screen {
+            background: var(--bg-color);
+            box-shadow: inset 10px 10px 20px var(--shadow-dark), 
+                        inset -10px -10px 20px var(--shadow-light);
+            border-radius: 30px;
+            overflow: hidden;
+        }
+
+        /* 自定義捲軸樣式 */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-color); }
+        ::-webkit-scrollbar-thumb { 
+            background: #cdd3d9; 
+            border-radius: 10px; 
+        }
     </style>
 </head>
-<body>
-    <h1>我的 AI 工具展示館</h1>
-    <p>這裡集合了我用 Google AI 技術製作的各式工具。</p>
+<body class="min-h-screen flex flex-col items-center py-12 px-4">
 
-    <div class="card">
-        <span class="tag">Gemini Canvas</span>
-        <h3>範例工具 A：創意寫作助手</h3>
-        <p>點擊下方連結即可複製範本至您的 Gemini 使用。</p>
-        <a href="你的Gemini_Canvas分享連結" target="_blank" class="btn">立即開啟</a>
+    <header class="text-center mb-12">
+        <h1 class="text-4xl font-light tracking-[0.2em] mb-4 text-gray-700">
+            袋鼠老師
+        </h1>
+        <p class="text-gray-500 tracking-widest font-light">
+            幼教魔法口袋－專業工具集成索引
+        </p>
+    </header>
+
+    <div class="w-full max-w-6xl neu-container p-8 md:p-12">
+        <div class="neu-inset-screen">
+            <iframe 
+                src="您的_GAS_發布網址" 
+                class="w-full h-[800px] border-none"
+                allow="clipboard-write; geolocation; microphone; camera"
+                loading="lazy">
+            </iframe>
+        </div>
     </div>
 
-    <div class="card">
-        <span class="tag">AI Studio / API</span>
-        <h3>範例工具 B：自動評語生成器</h3>
-        <p>此工具需使用您的 API Key。請放心，Key 僅存在您的瀏覽器中。</p>
-        <input type="password" id="apiKey" placeholder="在此輸入您的 Gemini API Key">
-        <a href="#" class="btn" onclick="alert('連結至你的GAS Web App或前端介面')">進入工具</a>
-    </div>
+    <footer class="mt-16 text-center text-gray-400 text-sm font-light">
+        <p>© 2026 袋鼠老師陪你幼教有愛. All Rights Reserved.</p>
+    </footer>
 
-    <hr>
-    <p>技術支援：Google Apps Script + GitHub Pages</p>
 </body>
 </html>
